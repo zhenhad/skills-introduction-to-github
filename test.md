@@ -41,12 +41,11 @@ The BRACS dataset contains breast cancer histopathology images. Key things to kn
 - It would be a good idea to begin with a basic CNN and transfer learning, then we can increase complexity if needed.
 - **Experiment**: Hyperparameter tuning (learning rate, optimizer, etc.) can significantly impact results.
 - **Collaboration**: If possible, collaborating with medical experts would be incredibly beneficial for understanding the dataset and interpreting results, but this kind of collaboration is not possible for this class project.
-
 ## Resources
 
 - Research Papers on classifying breast cancer histopathology images:
-- 1. [Read More](https://arxiv.org/pdf/2309.08745)
-- 2. [Read More](https://downloads.hindawi.com/journals/bmri/2022/2961610.pdf?_gl=1*10bdw6d*_ga*OTc3NDYxODE5LjE3MTI4NzE3NDY.*_ga_NF5QFMJT5V*MTcxMjg3MTc0Ni4xLjEuMTcxMjg3MTgwMC42LjAuMA..&_ga=2.50964397.580917596.1712871746-977461819.1712871746)
+- 1. [Improved Breast Cancer Diagnosis Through Transfer Learning on Hematoxylin and Eosin Stained Histology Images](https://arxiv.org/pdf/2309.08745)
+- 2. [Segmentation of Breast Tubules in H&E Images Based on a DKSDoubleU-Net Model](https://downloads.hindawi.com/journals/bmri/2022/2961610.pdf?_gl=1*10bdw6d*_ga*OTc3NDYxODE5LjE3MTI4NzE3NDY.*_ga_NF5QFMJT5V*MTcxMjg3MTc0Ni4xLjEuMTcxMjg3MTgwMC42LjAuMA..&_ga=2.50964397.580917596.1712871746-977461819.1712871746)
  
 
 ## Model interpretability and Grad-CAM in the context of medical image classification:
