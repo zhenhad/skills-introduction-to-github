@@ -10,5 +10,8 @@ processes incoming data through self-attention techniques.
 The self-attention mechanism
 allows the network to focus on different sections of the input data at other times. It allows to capture both local and global associations
 ![Transformer](transformer_architecture.jpg)
+
+![Transformer Image](https://ibb.co/J2DdNQp)
+
 ###References:
 _*
