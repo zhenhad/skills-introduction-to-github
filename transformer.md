@@ -11,7 +11,32 @@ The self-attention mechanism
 allows the network to focus on different sections of the input data at other times. It allows to capture both local and global associations
 ![Transformer](transformer_architecture.jpg)
 
-![Transformer Image](https://ibb.co/J2DdNQp)
+## conventional feedforward: 
+each neuron in a given layer is connected to all neurons in the next layer.
+## self-attention mechanism:
+each neuron in a specific layer is connected to all other neurons in that layer, including itself.
+
+the input image is divided into a grid of patches, and each patch is treated as an element in the input sequence.
+
+# Attention Mechanism in Computer Vision (CV):
+The model needed to focus on different image portions at different times.
+
+Attention mechanisms are utilized in vision transformers to record the image’s local and global spatial relationships. Instead of using convolutions to extract image features, the input image is partitioned into a grid of patches, with each patch regarded as a sequence element. The self-attention mechanism is then applied to the sequence of patch embeddings to generate a new set of embeddings that represent the spatial relationships between the patches.
+
+Vision transformers can capture long-range dependencies and relationships between patches in the image more effectively by using self-attention rather than convolutions
+
+# Patch-based Processing:
+
+breaking the input image into smaller, fixed-size patches and treating each patch as a single token. This method has both advantages and cons.
+
+## Advantages:
+* vision transformers may accept inputs of various sizes without extra resizing or cropping. This is especially beneficial for applications like object detection and segmentation, where the size and shape of the objects in the image might change significantly.
+
+* interactions between patches throughout the image, allowing for more excellent capture of the global image context. This is especially significant for tasks like scene comprehension or image captioning, where the context and interactions between items in the image are critical for creating accurate descriptions.
+
+
+
+
 
 ###References:
 _*
