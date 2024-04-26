@@ -31,7 +31,7 @@ Vision transformers can capture long-range dependencies and relationships betwee
 # Patch-based Processing:
 
 breaking the input image into smaller, fixed-size patches and treating each patch as a single token. This method has both advantages and cons.
-![Patch-based](ViT.png)
+![Patch-based](patch.png)
 
 ## Advantages:
 * vision transformers may accept inputs of various sizes without extra resizing or cropping. This is especially beneficial for applications like object detection and segmentation, where the size and shape of the objects in the image might change significantly.
@@ -90,6 +90,6 @@ This is because ViTs have a large number of parameters, which can be difficult t
 
 ### References:
 
-[#1](https://www.analyticsvidhya.com/blog/2023/06/vision-transformers-vit-revolutionizing-computer-vision/)
+[www.analyticsvidhya.com](https://www.analyticsvidhya.com/blog/2023/06/vision-transformers-vit-revolutionizing-computer-vision/)
 
-[#2](https://blog.roboflow.com/what-is-a-transformer/)
+[www.roboflow.com](https://blog.roboflow.com/what-is-a-transformer/)
