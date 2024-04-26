@@ -31,7 +31,7 @@ Vision transformers can capture long-range dependencies and relationships betwee
 # Patch-based Processing:
 
 breaking the input image into smaller, fixed-size patches and treating each patch as a single token. This method has both advantages and cons.
-![Patch-based](transformer_architecture.jpg)
+![Patch-based](ViT.png)
 
 ## Advantages:
 * vision transformers may accept inputs of various sizes without extra resizing or cropping. This is especially beneficial for applications like object detection and segmentation, where the size and shape of the objects in the image might change significantly.
@@ -59,29 +59,37 @@ The vision transformer learns a hierarchical representation of the input image b
 
 
 
-# Building the Transformer Model with PyTorch:
+# Building the Transformer Model with PyTorch for image classificaiton task:
 
-To build the Transformer model the following steps are necessary:
-
-* Importing the libraries and modules
-* Defining the basic building blocks - Multi-head Attention, Position-Wise Feed-Forward Networks, Positional Encoding
-* Building the Encoder block
-* Building the Decoder block
-* Combining the Encoder and Decoder layers to create the complete Transformer network
-
-  
-1. Import Libraries
-2. Importing Dataset
-3. Splitting Data
-4. Defining Model
-5. Loss and Optimizer
-6. Training Dataset
-7. Evaluating Dataset
+Split an image into patches (fixed sizes).
+Flatten the image patches.
+Create lower-dimensional linear embeddings from these flattened image. patches.
+Include positional embeddings.
+Feed the sequence as an input to a state-of-the-art transformer encoder.
+Pre-train the ViT model with image labels, which is then fully supervised on a big dataset.
+Fine-tune the downstream dataset for image classification.
 
 
-Python Snippet: Pre-trained Model
-Interpretability
+## CNN vs. ViTs:
 
+The Vision Transformer is a model that utilizes the architecture of a transformer, initially designed for text-based tasks, to handle image classification. Unlike Convolutional Neural Networks, which process images as pixel arrays, ViT breaks down the image into fixed-sized patches, which are treated as visual tokens and embedded. The model then uses positional embeddings to process the patches as sequences and feed them into a Transformer encoder for the prediction of image class labels.
 
-###References:
-_*
+The performance comparison between a Convolutional Neural Network and a Vision Transformer depends on several factors, such as the size of the dataset, the complexity of the task, and the architecture of the models.
+
+ViT exhibits excellent performance when trained on large datasets, surpassing state-of-the-art CNNs in accuracy while requiring 4x less computational resources. The successful application of transformers in NLP tasks has now been extended to images, where ViTs have proven to be highly effective in image recognition.
+
+The Vision Transformer model outperforms Convolutional Neural Networks in terms of computational efficiency during pre-training. However, ViT lacks the inductive bias present in CNNs, which leads to a greater dependence on regularization or data augmentation techniques when working with smaller datasets. To obtain optimal performance, it may be necessary to incorporate additional model regularization or data augmentation strategies when using Vision Transformers.
+
+Generally, CNNs are known for their strong spatial information processing capabilities, which make them well-suited for image classification tasks that require local feature extraction. They achieve this by applying convolutional filters to the input image, which learn local features such as edges, corners, and textures.
+
+On the other hand, ViTs are designed to handle large-scale datasets, and they rely on the transformer architecture, which was originally developed for NLP tasks, to process the tokenized image patches. ViTs can capture long-range dependencies between the tokens, which allows them to capture more global information about the image.
+
+In terms of performance, a ViT can surpass the performance of a CNN when trained on very large datasets, such as those containing over 14 million images. However, if the dataset is smaller, it is often more effective to use established models like ResNet or EfficientNet.
+
+This is because ViTs have a large number of parameters, which can be difficult to optimize on smaller datasets, whereas CNNs are typically more effective in these scenarios. In conclusion, the choice between a CNN and a ViT will depend on the specifics of the task at hand and the available resources, such as the size of the dataset and computational power.
+
+### References:
+
+[#1](https://www.analyticsvidhya.com/blog/2023/06/vision-transformers-vit-revolutionizing-computer-vision/)
+
+[#2](https://blog.roboflow.com/what-is-a-transformer/)
